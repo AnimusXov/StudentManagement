@@ -5,6 +5,7 @@ import com.lh.student.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,9 +46,8 @@ public void deleteStudents(){
 
 @PutMapping(path = "{studentId}")
 public void updateStudent( @PathVariable("studentId") Long studentId,
-                           @RequestParam(required = false) String name,
-                           @RequestParam(required = false) String email){
-	studentService.updateStudent(studentId,name,email);
+                          @RequestBody Student student ){
+	studentService.updateStudent(studentId,student);
 }
 
 }

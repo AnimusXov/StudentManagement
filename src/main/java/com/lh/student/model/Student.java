@@ -1,6 +1,7 @@
 package com.lh.student.model;
 
 import lombok.*;
+import org.hibernate.annotations.Formula;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -26,6 +27,7 @@ private String surname;
 private String email;
 @Transient
 @Getter(AccessLevel.NONE)
+@Formula("date_part('year', (current_timestamp)) - date_part('year',dob)")
 private Integer age;
 @NonNull
 private LocalDate dob;
