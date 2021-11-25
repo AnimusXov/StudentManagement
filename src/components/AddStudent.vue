@@ -37,10 +37,16 @@
       </div>
 
       <div class="form-group">
-        <label >Date of Birth</label>
-          <div>
-            <Datepicker for=dob v-model="date"  textInput />
-          </div>
+        <label for=dob>Date of Birth</label>
+        <div>
+          <Datepicker
+              v-model="student.dob"
+              format="dd-MM-yyyy"
+              name="dob"
+              id="dob"
+              type="date"
+               />
+        </div>
       </div>
 
       <button @click="saveStudent" class="btn btn-success">Submit</button>
@@ -61,6 +67,7 @@ import { ref } from "vue";
 
 
 
+
 export default {
   name: "add-student",
   components:{
@@ -73,7 +80,6 @@ export default {
     return {
       setup() {
         const date = ref(new Date());
-
         return {
           date,
         };
@@ -83,7 +89,7 @@ export default {
         name: "",
         surname: "",
         email: "",
-        dob: null,
+        dob: "",
       },
       submitted: false
     };
@@ -94,7 +100,7 @@ export default {
         name: this.student.name,
         surname: this.student.surname,
         email: this.student.email,
-        dob: this.student.dob
+        dob: this.student.dob,
       };
 
 

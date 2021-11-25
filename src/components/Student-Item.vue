@@ -18,9 +18,22 @@
       <div class="form-group">
         <label for="email">E-mail:</label>
         <input type="text" class="form-control" id="email"
-         v-model="currentStudent.email"
-               />
+               v-model="currentStudent.email"
+        />
       </div>
+      <div class="form-group">
+        <label for=dob>Date of Birth</label>
+        <div>
+          <Datepicker
+              v-model="currentStudent.dob"
+              format="dd-MM-yyyy"
+              name="dob"
+              id="dob"
+              type="date"
+          />
+        </div>
+      </div>
+
     </form>
 
     <button class="badge badge-primary mr-2"
@@ -57,16 +70,31 @@
 
 <script>
 import StudentDataService from "../services/StudentDataService";
+import Datepicker from 'vue3-date-time-picker';
+import 'vue3-date-time-picker/dist/main.css'
+import {ref} from "vue";
+
 
 export default {
   name: "student-item",
+  components:{
+    Datepicker
+  },
   data() {
     return {
+      setup() {
+        const date = ref(new Date());
+
+        return {
+          date,
+        };
+      },
       currentStudent: null,
       message: ''
     };
   },
   methods: {
+
     getStudent(id) {
       StudentDataService.get(id)
           .then(response => {
@@ -84,6 +112,7 @@ export default {
         name: this.currentStudent.name,
         surname: this.currentStudent.surname,
         email: this.currentStudent.email,
+        dob: this.currentStudent.dob,
       };
 
       StudentDataService.update(this.currentStudent.id, data)
