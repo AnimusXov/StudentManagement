@@ -16,7 +16,7 @@
   <h3 align="center">Student Management System</h3>
 
   <p align="center">
-    Simple project utilizing REST in order to interact with data in database.
+    Simple project utilizing REST in order to interact with data in the database.
     <br />
     <br />
     <br />
@@ -61,9 +61,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://i.imgur.com/Fl617gE.png)
    Simple project utilizing REST in order to interact with data in database
- `AnimusXov`, `StudentManagement`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
+ 
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -184,4 +184,4 @@ Project Link: [https://github.com/AnimusXov/StudentManagement](https://github.co
 [license-url]: https://github.com/AnimusXov/StudentManagement/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/dawid-%C5%BCurek/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: https://i.imgur.com/Fl617gE.png
