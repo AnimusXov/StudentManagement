@@ -28,7 +28,7 @@ public Optional<Student> getStudent( @PathVariable("studentId") Long studentId){
 	return studentService.getStudent(studentId);
 }
 
-@PostMapping("/students")
+@PostMapping()
 public void registerNewStudent(@RequestBody Student student){
 	studentService.addNewStudent(student);
 }

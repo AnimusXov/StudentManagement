@@ -25,7 +25,7 @@ public class StudentService{
 		return studentRepository.findAll();
 	}
 	
-	public void addNewStudent( Student student ){
+	public void addNewStudent(Student student){
 		Optional<Student> studentByEmail =
 				studentRepository.findStudentByEmail(student.getEmail());
 		if(studentByEmail.isPresent()){
@@ -62,7 +62,7 @@ public class StudentService{
 		studentRepository.deleteById(studentId);
 	}
 
-public void deleteStudents(){
+    public void deleteStudents(){
 		boolean exists = studentRepository.existsById(1L);
 	if(!exists){
 		throw new IllegalStateException("No students exist");

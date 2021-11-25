@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @EnableJpaRepositories
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.lh.student.*" )
 @EntityScan (basePackages = "com.lh.student.*")
 public class StudentManagementApplication{
 
