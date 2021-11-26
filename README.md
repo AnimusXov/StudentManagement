@@ -72,8 +72,6 @@
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 * [Spring](https://spring.io/)
 * [Vue.js](https://vuejs.org/)
 * [Hibernate](https://https://hibernate.org//)
